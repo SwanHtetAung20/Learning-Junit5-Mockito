@@ -23,7 +23,7 @@ public class BookService {
     }
 
     public Book findById(Long id) {
-        return bookRepository.findById(id).orElseThrow();
+        return bookRepository.findById(id).orElse(null);
     }
 
     public Book update(Long id, Book book) {
